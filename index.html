@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering Grade Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Engineering Grade Calculator</h1>
+        <p>Calculate your semester and cumulative performance.</p>
+    </header>
+
+    <main>
+
+        <!-- Academic Dashboard -->
+        <section id="dashboard">
+            <h2>Academic Dashboard</h2>
+
+            <div class="dashboard-card">
+                <h3>Current Semester SPI</h3>
+                <p id="spi-value">---</p>
+            </div>
+
+            <div class="dashboard-card">
+                <h3>Overall CPI</h3>
+                <p id="cpi-value">---</p>
+            </div>
+
+            <div class="dashboard-card">
+                <h3>Which semester are you currently studying in?</h3>
+
+                <label for="current-semester-select">
+                    Select your current semester:
+                </label>
+
+                <select id="current-semester-select">
+                    <option value="">Select your semester</option>
+                    <option value="1">Semester 1</option>
+                    <option value="2">Semester 2</option>
+                    <option value="3">Semester 3</option>
+                    <option value="4">Semester 4</option>
+                    <option value="5">Semester 5</option>
+                    <option value="6">Semester 6</option>
+                    <option value="7">Semester 7</option>
+                    <option value="8">Semester 8</option>
+                </select>
+
+                <p id="current-semester-value">Not selected</p>
+            </div>
+        </section>
+
+
+        <!-- Semester SPI Calculator -->
+        <section id="semester-calculator">
+            <h2>Semester SPI Calculator</h2>
+
+            <p>Add your subjects, credits, and grade points here.</p>
+
+            <button id="add-subject-btn" type="button">
+                Add Subject
+            </button>
+
+            <div id="subjects-container"></div>
+
+            <p id="spi-error" aria-live="polite"></p>
+
+            <p>
+                Semester SPI:
+                <span id="spi-result">--</span>
+            </p>
+
+            <div id="spi-details" aria-live="polite">
+                <p>
+                    Total Credits:
+                    <span id="total-credits">0</span>
+                </p>
+
+                <p>
+                    Weighted Grade Points:
+                    <span id="weighted-points">0</span>
+                </p>
+            </div>
+
+            <button id="calculate-semester-btn" type="button">
+                Calculate Semester SPI
+            </button>
+
+            <button id="add-spi-to-cpi-btn" type="button">
+                Add SPI to CPI
+            </button>
+        </section>
+
+
+        <!-- Cumulative CPI Calculator -->
+        <section id="cpi-calculator">
+            <h2>Cumulative Performance Index Calculator</h2>
+
+            <p>
+                Add semesters and their subjects to calculate your overall CPI.
+            </p>
+
+            <button id="add-semester-btn" type="button">
+                Add Semester
+            </button>
+
+            <div id="semesters-container"></div>
+
+            <p id="cpi-error" role="alert" aria-live="polite"></p>
+
+            <div id="cpi-details">
+                <p>
+                    Total Credits:
+                    <span id="cpi-total-credits">0</span>
+                </p>
+
+                <p>
+                    Weighted Grade Points:
+                    <span id="cpi-weighted-points">0</span>
+                </p>
+
+                <p>
+                    Cumulative CPI:
+                    <span id="cpi-result">--</span>
+                </p>
+            </div>
+
+            <button id="calculate-cpi-btn" type="button">
+                Calculate CPI
+            </button>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Use your university's official grade-point regulations.</p>
+    </footer>
+
+</body>
+</html>
